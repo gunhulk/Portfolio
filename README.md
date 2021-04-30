@@ -11,7 +11,7 @@ College Software Engineering project. Worked with three other people. The projec
 This was my final project for computer vision. I decided to create a person tracking program. When ran, the program will open the camera on your CPU by default. The program outlines a box around every object it thinks is a person. This project is very accurate and can track multiple people at once in real time. If you desire to track people in a video/ picture/ movie instead, you can do that as well and it will track all the people in the desired media in real time.
 
 # Virtual Memory Manager
-This was my final project for operating systems. The program translates addresses, it proves my understanding in operating systems. It covers algorthms, methods, and other important technical things that operating system programs use.
+This was my final project for operating systems. The program translates addresses, it proves my understanding in operating systems. It covers algorthms, methods, and other important technical things that operating system programs use. This was written all in C while using the linux command line, though the program does not need to be ran in a linux system.
 
 # ImageEqualization
 Python Program that equalizes the color of an image. It is an advanced problem that I am proud of solving. The problem shows technical skills I have learned, and is a fun program to show off.
