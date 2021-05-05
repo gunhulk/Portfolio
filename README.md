@@ -43,5 +43,5 @@ Python Program that equalizes the color of an image. It is an advanced problem t
 Learning goals:
 The image equalization program proves my understanding of object oriented programing. It can also be used in a global responsible enviroment if used appropriately.
 
-#Resume
+# Resume
 https://github.com/gunhulk/Portfolio/tree/master/Resume
