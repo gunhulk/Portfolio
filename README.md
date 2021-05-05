@@ -1,5 +1,10 @@
 # Portfolio
 
+![Alt text](C:\Users\Arcti\Downloads/img.jpg?raw=true "Title")
+
+#Bio
+
+
 # Senior Project - Capstone 
 https://github.com/gunhulk/Portfolio/tree/master/Senior%20Project
 
@@ -25,3 +30,6 @@ This was my final project for operating systems. The program translates addresse
 https://github.com/gunhulk/Portfolio/tree/master/ImageEqualization
 
 Python Program that equalizes the color of an image. It is an advanced problem that I am proud of solving. The problem shows technical skills I have learned, and is a fun program to show off.
+
+#Resume
+https://github.com/gunhulk/Portfolio/tree/master/Resume
