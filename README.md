@@ -1,6 +1,6 @@
 # Portfolio
 
-![Picture](C:/Users/Arcti/Downloads/self.jpg?raw=true "Title")
+![Picture](C:\Users\Arcti\Downloads\self.jpg?raw=true "Title")
 
 #Bio
 
