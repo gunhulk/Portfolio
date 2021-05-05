@@ -1,6 +1,6 @@
 # Portfolio
 
-![Picture](C:\Users\Arcti\Downloads\self.jpg?raw=true "Title")
+![Picture](https://i.imgur.com/Ij36Fk3.jpg)
 
 #Bio
 
