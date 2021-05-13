@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Galaxy Chores</title>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="login.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login">
+    <h1> Welcome to Galaxy Chores</h1>
+    <!--<img src="images/Galaxy Chores Logo.png" width="300" height="300" alt="logo">-->
+    <h3>Please create your character</h3>
+    <form method="">
+    <input type="text" placeholder="Character Name" id="user">
+    <input type="text" placeholder="Spaceship Name" id="spaceship">
+    </form>
+
+    <button onclick="setup()" id="setup" class="btn btn-primary">Submit</button>
+
+</div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>

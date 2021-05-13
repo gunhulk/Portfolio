@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Galaxy Chores Create Missions</title>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<!--<script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="login.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="login.css">
+<script src="https://kit.fontawesome.com/0127095b20.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="leftnav" id="leftnav">
+            <div class="logoc">
+                <img src="images/Galaxy Chores Logo.png" alt="" onclick="home()">
+            </div>
+                <script>
+                    displayUserName();
+                    displayUserCredits();
+                    displayUserExp();
+                    displayUserRank();
+                </script>
+                <li><h1 class="topcreate">Credits:</h1></li>
+                <li><h1 class="topcreate" id= "displayCredits"></h1></li>
+                <li><h1 class="topcreate">Experience Points:</h1></li>
+                <li><h1 class="topcreate" id= "displayExp"></h1></li>
+    </ul>
+    </nav>
+    <div class="login">
+        <div class="split left create">
+            <h1> Create Mission </h1>
+            <input type="text" placeholder="Location Name" id="cLocation">
+            <input type="text" placeholder="Mission name" id="cName">
+            <input type="text" placeholder="Mission Description" id="cDescription">
+            <input type="number" placeholder="Credits" id="cCredits">
+            <input type="number" placeholder="Experience Points" id="cExp">
+            <div class="block">
+                <button onclick="createchore()" class="homebtnc bt4" id="createchore"> Create Mission </button>
+                <button onclick="home()" class="homebtn baccr bt4"> <i class="fas fa-hand-point-left"></i> Go Back </button>
+            </div>
+        </div>
+        <div class="split right create">
+        <h1> Your Missions </h1>
+        <script>
+        displayChoreNameCreate();
+        </script>
+        <p class="missionCreate" id = "displayChoresCreate"></p> 
+        
+        <!--<h1>Default Missions:</h1>
+        <script>displayDefaultChores()</script>
+        <h1 id = displayDefaultChores></h1>-->
+    </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Galaxy Chores Settings</title>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use -->
+<!--<script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>-->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="login.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="login.css">
+<script src="https://kit.fontawesome.com/0127095b20.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="login">
+        <div class="split left">
+                <h1><i class="fas fa-user-astronaut"></i> Profile Settings</h1>
+                <form method="">
+                    <input class="in" type="text" placeholder="Change Username" id="user">
+                </form>
+                <button onclick="changeuser()" class="btn btn-primary" id="changeuser"> Submit </button>
+                <form method="">
+                    <input class="in" type="text" placeholder="Change Level Up Bonus" id="lvlB">
+                </form>
+                <button onclick="changebonus()" class="btn btn-primary" id="changebonus"> Submit </button>
+
+                <script>
+                displayUserName();
+                displayUserBonus();
+                displayUserEmail();
+                displayUserExp();
+                displayUserCredits();
+                displayUserlvl();
+                displayUserRank();
+                </script>
+            
+                <div class="block">
+                    <p class="bt1">Username:</p>
+                    <p class="bt2" id = "displayName"></p>
+                </div>
+                <div class="block">
+                    <p class="bt1">Level Up Bonus:</p>
+                    <p class="bt2" id = "displayBonus"></p>
+                    <p class="bt2"> Credits</p>
+                </div>
+                <div class="block">
+                    <p class="bt1">Level:</p>
+                    <p class="bt2" id = "displaylvl"></p>
+                    <p class="bt2"> out of 11</p>
+                </div>
+                <div class="block">
+                    <p class="bt1">Rank:</p>
+                    <p class="bt2" id = "displayRank"></p>
+                </div>
+                <div class="block">
+                    <p class="bt1">Email:</p>
+                    <p class="bt2" id = "displayEmail"></p>
+                </div>
+                <div class="block">
+                    <p class="bt1">Credits:</p>
+                    <p class="bt2" id = "displayCredits"></p>
+                </div>
+                <div class="block">
+                    <p class="bt1">Experience Points:</p>
+                    <p class="bt2" id= "displayExp"></p>
+            </div>
+            <button onclick="home()" class="btn bsettings btn-dark"><i class="fas fa-hand-point-left"></i> Go Back </button>
+    </div>
+        <div class="split right">
+                <h1> Cashout </h1>
+                <form method="">
+                    <input class="in" type="text" placeholder="Cashout Credit Amount" id="cashout">
+                </form>
+                <button onclick="cashout()" class="btn btn-primary" id="cashout"> Cashout </button>
+                
+                <h1 class="pending">Pending Balance</h1>
+                <script>displayPending()</script>
+                <h1 id="pending"></h1>
+                <button onclick="withdraw()" class="btn btn-primary" id="withdraw"> Withdraw Credits </button> 
+                <button onclick="cwithdraw()" class="btn btn-danger" id="cwithdraw"> Cancel Pending Balance </button>
+                
+            </div>
+            
+    
+</div>
+        
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>
