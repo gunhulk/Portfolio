@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Spelic | Sign In</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+    <section id="main" class="wrapper alt">
+        <div class="inner">
+            <div class="form-wrapper">
+                <h1 id="title">Sign In</h1>
+                <p id="error-message"> </p>
+
+                <div class="form"> 
+
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+
+                    <input id="" type="submit" value="Sign In" class="special" onclick="signIn()">
+                    <input id="" type="submit" value="Forgot Password" onclick="forgotPassword()">
+                </div>
+                <a href="signup.html">Don't have an account?</a>
+            </div>
+    </section>
+
+    <!-- Firebase Scripts -->
+    <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.8.2/firebase-database.js"></script>
+    <script src="/__/firebase/7.9.1/firebase-functions.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="./assets/js/constants.js"></script>
+    <script src="./assets/js/models/objects.js"></script>
+    <script src="./assets/js/models/firebase.js"></script>
+    <script src="./assets/js/controllers/signin.js"></script>
+
+    <script src="assets/js/ui/jquery.min.js"></script>
+    <script src="assets/js/ui/jquery.scrolly.min.js"></script>
+    <script src="assets/js/ui/jquery.scrollex.min.js"></script>
+    <script src="assets/js/ui/skel.min.js"></script>
+    <script src="assets/js/ui/util.js"></script>
+    <script src="assets/js/ui/main.js"></script>
+</body>
+
+</html>

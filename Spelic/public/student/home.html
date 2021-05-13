@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Menu Page</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+
+  <body>
+    <header id="header">
+      <a class="logo" id="title-header"></a>
+      <nav>
+        <ul>
+          <li>
+            <!-- TODO: Put styling in css file -->
+            <a
+              style="position: absolute; right: 0; top: 0; font-size: 2em;"
+              onclick="displayModal('profile')"
+              class="icon fa-user"
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="wrapper">
+      <div class="inner">
+        <div class="6u 12u$(xsmall)">
+          <p id="grade-level"></p>
+        </div>
+        <div class="6u 12u$(xsmall)">
+          <a class="button" href="../game.html">Play Game</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="profile">
+      <div class="content">
+        <span class="close" onclick="closeModal('profile')">&times;</span>
+        <section class="wrapper">
+          <div class="inner">
+            <h1>Account Settings</h1>
+            <div class="row uniform">
+              <div class="6u 12u$(xsmall)">
+                <input
+                  id=""
+                  type="submit"
+                  value="Sign Out"
+                  onclick="signOut()"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.8.2/firebase-database.js"></script>
+    <script src="/__/firebase/7.9.1/firebase-functions.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="../assets/js/constants.js"></script>
+    <script src="../assets/js/models/objects.js"></script>
+    <script src="../assets/js/models/firebase.js"></script>
+    <script src="../assets/js/controllers/student/home.js"></script>
+
+    <script src="../assets/js/ui/jquery.min.js"></script>
+    <script src="../assets/js/ui/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/ui/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/ui/skel.min.js"></script>
+    <script src="../assets/js/ui/util.js"></script>
+    <script src="../assets/js/ui/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Teacher Menu Page</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body>
+  <header id="header">
+    <a class="logo" id="title-header">Spelic</a>
+    <nav>
+      <ul>
+        <li>
+          <!-- TODO: Put styling in css file -->
+          <a style="position: absolute; right: 0; top: 0; font-size: 2em;" onclick="displayModal('profile')"
+            class="icon fa-user"></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="wrapper">
+    <div class="inner">
+      <div class="tabs-wrapper">
+        <div class="headers">
+          <h2 onclick="switchTab('students-content', this)">
+            <span class="underline-large active">Students</span>
+          </h2>
+          <h2 onclick="switchTab('custom-words-content', this)">
+            <span class="underline-large">Custom Words</span>
+          </h2>
+          <h2 onclick="switchTab('game-content', this)">
+            <span class="underline-large">Game</span>
+          </h2>
+        </div>
+        <div class="tabs">
+          <div id="students-content" class="tab">
+            <ul id="students-list">
+              <div class="loader"></div>
+            </ul>
+          </div>
+
+          <div id="custom-words-content" class="tab">
+            <ul id="custom-words"></ul>
+          </div>
+
+          <div id="game-content" class="tab">
+            <div class="row uniform">
+              <div class="6u 12u$(xsmall)">
+                <select id="game-level">
+                  <option id="first-grade">First Grade</option>
+                  <option id="second-grade">Second Grade</option>
+                  <option id="third-grade">Third Grade</option>
+                  <option id="fourth-grade">Fourth Grade</option>
+                  <option id="fifth-grade">Fifth Grade</option>
+                </select>
+              </div>
+              <div class="6u 12u$(xsmall)">
+                <input id="" type="submit" value="Test Game" onclick="testGame()" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="profile">
+    <div class="content">
+      <span class="close" onclick="closeModal('profile')">&times;</span>
+      <section class="wrapper">
+        <div class="inner">
+          <h1>Account Settings</h1>
+          <div class="row uniform">
+            <div class="6u 12u$(xsmall)">
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+            <div class="6u 12u$(xsmall)">
+              <input id="" type="submit" value="Update Name" class="special" onclick="updateName()" />
+            </div>
+            <div class="6u 12u$(xsmall)">
+              <input id="update-password" type="submit" value="Update Password" onclick="updatePassword()" />
+            </div>
+            <div class="6u 12u$(xsmall)">
+              <input id="" type="submit" value="Sign Out" onclick="signOut()" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="createStudent">
+    <div class="content">
+      <span class="close" onclick="closeModal('createStudent')">&times;</span>
+      <section class="wrapper">
+        <div class="inner">
+          <div class="form">
+            <input type="text" name="student-name" id="student-name" placeholder="Student Name" />
+            <input type="password" name="student-password" id="student-password" placeholder="Student Password" />
+            <input type="password" name="student-confirm-password" id="student-confirm-password"
+              placeholder="Confirm Student Password" />
+
+              <select id="student-grade">
+                <option id="first-grade" value="1">First Grade</option>
+                <option id="second-grade" value="2">Second Grade</option>
+                <option id="third-grade" value="3">Third Grade</option>
+                <option id="fourth-grade" value="4">Fourth Grade</option>
+                <option id="fifth-grade" value="5">Fifth Grade</option>
+              </select>
+
+            <input id="" type="submit" value="Create Account" class="special" onclick="addStudentAccount()" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="editStudent">
+    <div class="content">
+      <span class="close" onclick="closeModal('editStudent')">&times;</span>
+      <section class="wrapper">
+        <div id="editStudentContent" class="inner">
+          
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="addWord">
+    <div class="content">
+      <span class="close" onclick="closeModal('addWord')">&times;</span>
+      <section class="wrapper">
+        <div class="inner">
+          <div class="form">
+            <div class="row uniform">
+              <div class="12u 12u$(xsmall)">
+                <input type="text" name="new-word" id="new-word" placeholder="New Word" />
+                <input type="text" name="new-hint" id="new-hint" placeholder="Hint" />
+              </div>
+              <div class="6u$ 12u$(xsmall)">
+                <select id="sort">
+                  <option id="first-grade">First Grade</option>
+                  <option id="second-grade">Second Grade</option>
+                  <option id="third-grade">Third Grade</option>
+                  <option id="fourth-grade">Fourth Grade</option>
+                  <option id="fifth-grade">Fifth Grade</option>
+                </select>
+              </div>
+              <div class="6u$ 12u$(xsmall)">
+                <input id="" type="submit" value="Add Word" class="special" onclick="addWord()" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="editWord">
+    <div class="content">
+      <span class="close" onclick="closeModal('editWord')">&times;</span>
+      <h1>Edit Custom Word</h1>
+      <section class="wrapper">
+        <div class="inner">
+          <div class="form">
+            <div class="row uniform">
+              <div class="12u 12u$(xsmall)">
+                <input type="text" name="update-word" id="update-word" placeholder="Word" />
+                <input type="text" name="update-hint" id="update-hint" placeholder="Hint" />
+              </div>
+              <div class="6u$ 12u$(xsmall)">
+                <input id="update-word-button" type="submit" value="Update Word" class="special"/>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.8.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.8.2/firebase-database.js"></script>
+  <script src="/__/firebase/7.9.1/firebase-functions.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+  <script src="../assets/js/constants.js"></script>
+  <script src="../assets/js/models/objects.js"></script>
+  <script src="../assets/js/models/firebase.js"></script>
+  <script src="../assets/js/controllers/teacher/home.js"></script>
+
+  <script src="../assets/js/ui/jquery.min.js"></script>
+  <script src="../assets/js/ui/jquery.scrolly.min.js"></script>
+  <script src="../assets/js/ui/jquery.scrollex.min.js"></script>
+  <script src="../assets/js/ui/skel.min.js"></script>
+  <script src="../assets/js/ui/util.js"></script>
+  <script src="../assets/js/ui/main.js"></script>
+  <script src="../assets/js/ui/tabs.js"></script>
+</body>
+
+</html>

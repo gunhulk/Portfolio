@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spelic</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+
+<!-- TODO: move styling into css file -->
+
+<body>
+    <section class="wrapper">
+        <div class="inner">
+            <div class="form">
+                <div class="row uniform">
+                    <div class="6u 12u$(xsmall)">
+                        <input type="text" name="new-word" id="new-word" placeholder="Word">
+                    </div>
+                    <div class="6u 12u$(xsmall)">
+                        <input type="text" name="new-hint" id="new-hint" placeholder="Hint">
+                    </div>
+                    <div class="6u$ 12u$(xsmall)">
+                        <select id="sort">
+                            <option id="first-grade">First Grade</option>
+                            <option id="second-grade">Second Grade</option>
+                            <option id="third-grade">Third Grade</option>
+                            <option id="fourth-grade">Fourth Grade</option>
+                            <option id="fifth-grade">Fifth Grade</option>
+                        </select>
+                    </div>
+                    <div class="6u$ 12u$(xsmall)">
+                        <input id="" type="submit" value="Add Word" class="special" onclick="addWord()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firebase Scripts -->
+    <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.8.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.8.2/firebase-database.js"></script>
+    <script src="/__/firebase/7.9.1/firebase-functions.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="./assets/js/constants.js"></script>
+    <script src="./assets/js/models/objects.js"></script>
+    <script src="./assets/js/models/firebase.js"></script>
+
+    <script src="./assets/js/ui/jquery.min.js"></script>
+    <script src="./assets/js/ui/jquery.scrolly.min.js"></script>
+    <script src="./assets/js/ui/jquery.scrollex.min.js"></script>
+    <script src="./assets/js/ui/skel.min.js"></script>
+    <script src="./assets/js/ui/util.js"></script>
+    <script src="./assets/js/ui/main.js"></script>
+
+    <script>
+        var database = firebase.database();
+        let firstGradeSelect = document.getElementById("first-grade");
+        let secondGradeSelect = document.getElementById("second-grade");
+        let thirdGradeSelect = document.getElementById("third-grade");
+        let fourthGradeSelect = document.getElementById("fourth-grade");
+        let fifthGradeSelect = document.getElementById("fifth-grade");
+
+        firstGradeSelect.value = FIRST_GRADE;
+        secondGradeSelect.value = SECOND_GRADE;
+        thirdGradeSelect.value = THIRD_GRADE;
+        fourthGradeSelect.value = FOURTH_GRADE;
+        fifthGradeSelect.value = FIFTH_GRADE;
+
+        function addWord() {
+            var newWord = document.getElementById("new-word").value
+            var newHint = document.getElementById("new-hint").value
+            var grade = sort.options[sort.selectedIndex].value;
+
+            database
+                .ref("words/" + grade)
+                .push({
+                    word: newWord,
+                    hint: newHint
+                })
+                .then(function () {
+                    alert("success");
+                })
+                .catch(function (error) {
+                    alert(error);
+                });
+        }
+    </script>
+</body>
+
+</html>
